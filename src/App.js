@@ -27,7 +27,7 @@ import React, { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
+import Login from "./login/login";
 import AddTutorial from "./components/add-tutorial.component";
 import TutorialsList from "./components/tutorials-list.component";
 
@@ -56,7 +56,10 @@ class App extends Component {
         <div className="container mt-3">
           <h2>⠀⠀⠀⠀⠀⠀⠀⠀⠀</h2>
           <Switch>
-            <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
+
+            <Route exact path="/" component={Login}/>
+
+            <Route exact path= "/tutorials" component={TutorialsList} />
             <Route exact path="/add" component={AddTutorial} />
           </Switch>
         </div>

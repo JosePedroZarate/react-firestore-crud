@@ -99,6 +99,7 @@ export default class AddTutorial extends Component {
         .getDownloadURL()
         .then((url) => {
           //this.setFile(null);
+          console.log(url)
           this.setState({fileurl: url});
         });
     });
